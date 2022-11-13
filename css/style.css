@@ -1,9 +1,9 @@
-body {
-  font-family: "Montserrat", sans-serif;
+main {
+  display: flex;
+  flex-direction: column;
 }
-
-.card__header {
-  color: #F03000;
+main section {
+  margin: 20px;
 }
 
 .grid-container {
@@ -41,6 +41,20 @@ body {
   grid-column: span 12;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -50,10 +64,16 @@ body {
 .header__logo {
   height: 30px;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 .nav {
   display: flex;
   justify-content: center;
-  padding: 0;
   margin: 20px auto;
 }
 .nav__item {
@@ -62,7 +82,7 @@ body {
 .nav__link {
   text-decoration: none;
   color: #F03000;
-  display: inline-block;
+  font-weight: 400;
   padding: 20px;
 }
 .nav__link:hover, .nav__link:focus {
@@ -120,6 +140,15 @@ body {
 .card__content {
   padding: 20px;
 }
+.card__header {
+  font-weight: 400;
+  font-size: 1.125em;
+  color: #F03000;
+  margin-bottom: 10px;
+}
+.card__caption {
+  font-family: "Open Sans", sans-serif;
+}
 
 .iconCard {
   display: flex;
@@ -128,4 +157,14 @@ body {
   padding: 20px;
   height: 40px;
   flex: 0 0 60px;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.footer p {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,14 @@
 
-.grid-container{
+main{
+    display: flex;
+    flex-direction: column;
+
+    & section{
+        margin: $spacer;
+    }
+}
+
+.grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;

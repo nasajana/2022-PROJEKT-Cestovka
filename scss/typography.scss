@@ -1,9 +1,16 @@
 body{
     font-family: $default-font;
+    font-weight: $regular;
 }
 
 
-
-.card__header{
-    color: $color-primary ;
+h1,
+h2,
+h3,
+ul,
+li,
+p{
+    margin: 0;
+    padding: 0;
 }
+

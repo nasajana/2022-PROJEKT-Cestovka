@@ -1,6 +1,6 @@
 @import "variables.scss";
-@import "typography.scss";
 @import "grid.scss";
+@import "typography.scss";
 
 .header{
     display: flex;
@@ -16,30 +16,33 @@
         
     }
 
+    @media screen and (min-width: $breakpoint--tablet) {
+        flex-direction: row;
+        align-items: center;
+    }
 
 }
 
 .nav{
     display: flex;
     justify-content: center;
-    padding: 0;
     margin: 20px auto;
-    &__item{
-    list-style: none;
-}
-
-&__link{
-    text-decoration: none;
-    color: $color-primary;
-    display: inline-block;
-    padding: 20px;
-
-        &:hover,
-        &:focus{
-            background-color: $color-primary;
-            color: $color-white;
-        }
+        &__item{
+        list-style: none;
     }
+
+    &__link{
+        text-decoration: none;
+        color: $color-primary;
+        padding: $spacer;
+
+            &:hover,
+            &:focus{
+                background-color: $color-primary;
+                color: $color-white;
+            }
+    }
+
 
 }
 
@@ -78,7 +81,7 @@
     &--xl{
         min-height: 240px;
     }
-    &__price{
+    &__price {
         padding: 10px;
         background-color: $color-primary;
     }
@@ -87,8 +90,21 @@
 .card{
     background-color: $color-gray--light;
     
-    &__content{
+    &__content {
         padding: $spacer;
+    }
+
+    &__date {
+        font
+    }
+    &__header {
+    font-size: 1.125em;
+    color: $color-primary;
+    margin-bottom: calc(0.5$spacer);
+    }
+
+    &__caption {
+        font-family: $secondary-font;
     }
     
 }
@@ -103,4 +119,18 @@
     }
 
     
+}
+
+
+
+
+.footer{
+    background-color: $color-black;
+    color: $color-white;
+    padding: $spacer;
+    text-align: center;
+
+    & p{
+        margin: 0;
+    }
 }
