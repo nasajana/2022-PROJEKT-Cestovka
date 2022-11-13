@@ -83,3 +83,24 @@
         background-color: $color-primary;
     }
 }
+
+.card{
+    background-color: $color-gray--light;
+    
+    &__content{
+        padding: $spacer;
+    }
+    
+}
+
+.iconCard{
+    display: flex;
+
+    &__icon{
+        padding: $spacer;
+        height: 40px;
+        flex: 0 0 60px;
+    }
+
+    
+}

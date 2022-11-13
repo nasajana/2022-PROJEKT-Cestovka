@@ -112,4 +112,20 @@ body {
 .imgCard__price {
   padding: 10px;
   background-color: #F03000;
+}
+
+.card {
+  background-color: #F0F0F0;
+}
+.card__content {
+  padding: 20px;
+}
+
+.iconCard {
+  display: flex;
+}
+.iconCard__icon {
+  padding: 20px;
+  height: 40px;
+  flex: 0 0 60px;
 }/*# sourceMappingURL=style.css.map */
