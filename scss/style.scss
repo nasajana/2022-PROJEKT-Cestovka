@@ -1,2 +1,22 @@
 @import "variables.scss";
-@import "fonts.scss"
+@import "typography.scss";
+@import "grid.scss";
+
+
+
+.img-01{
+    background-image: url(/images/palmy.png);
+}
+.img-02{
+    background-image: url(/images/jezero2.png);
+}
+.img-03{
+    background-image: url(/images/nakole.png);
+}
+
+
+.imgCard{
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
