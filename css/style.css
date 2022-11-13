@@ -45,19 +45,29 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 40px;
 }
-
+.header__logo {
+  height: 30px;
+}
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0;
+  margin: 20px auto;
 }
 .nav__item {
   list-style: none;
-  padding: 10px;
 }
 .nav__link {
   text-decoration: none;
   color: #F03000;
+  display: inline-block;
+  padding: 20px;
+}
+.nav__link:hover, .nav__link:focus {
+  background-color: #F03000;
+  color: #fff;
 }
 
 .img-01 {
