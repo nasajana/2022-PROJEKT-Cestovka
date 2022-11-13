@@ -2,6 +2,29 @@
 @import "typography.scss";
 @import "grid.scss";
 
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+
+    &__item{
+    list-style: none;
+    padding: 10px;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $color-primary;
+    }
+
+}
 
 
 .img-01{
@@ -13,10 +36,33 @@
 .img-03{
     background-image: url(/images/nakole.png);
 }
-
+.img-11{
+    background-image: url(/images/lodicka.png);
+}
+.img-12{
+    background-image: url(/images/podkova.png);
+}
+.img-13{
+    background-image: url(/images/zatoka.png);
+}
 
 .imgCard{
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px;
+    color: $color-white;
     
+    &--xl{
+        min-height: 240px;
+    }
+    &__price{
+        padding: 10px;
+        background-color: $color-primary;
+    }
 }

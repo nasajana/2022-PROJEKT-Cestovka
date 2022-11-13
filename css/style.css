@@ -41,6 +41,25 @@ body {
   grid-column: span 12;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__item {
+  list-style: none;
+  padding: 10px;
+}
+.nav__link {
+  text-decoration: none;
+  color: #F03000;
+}
+
 .img-01 {
   background-image: url(/images/palmy.png);
 }
@@ -53,7 +72,34 @@ body {
   background-image: url(/images/nakole.png);
 }
 
+.img-11 {
+  background-image: url(/images/lodicka.png);
+}
+
+.img-12 {
+  background-image: url(/images/podkova.png);
+}
+
+.img-13 {
+  background-image: url(/images/zatoka.png);
+}
+
 .imgCard {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 15px;
+  color: #fff;
+}
+.imgCard--xl {
+  min-height: 240px;
+}
+.imgCard__price {
+  padding: 10px;
+  background-color: #F03000;
 }/*# sourceMappingURL=style.css.map */

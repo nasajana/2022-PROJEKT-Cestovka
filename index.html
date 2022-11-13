@@ -17,12 +17,12 @@
 <body>
     <!--  hlavička -->
     <header class="header">
-        <img class="logoImg" src="images/logo.svg" alt="Cestovka-logo">
-        <nav class="menu">
-            <ul>
-                <li class="menu__item"><a href="#">Last minute</a></li>
-                <li class="menu__item"><a href="#">Destinace</a></li>
-                <li class="menu__item"><a href="#">Časté otázky</a></li>
+        <img class="header__logo logoImg" src="images/logo.svg" alt="Cestovka-logo">
+        <nav class="header__nav">
+            <ul class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Last minute</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Destinace</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Časté otázky</a></li>
             </ul>
         </nav>
     </header>
@@ -31,17 +31,20 @@
         <div class="imgContainer">
             <div class="imgCard  imgCard--xl img-01">
                 <p class="imgCard__price">17 600 Kč</p>
-                <h3 class="imgCard__header">Pohoda pod palmami</h3>
-                <p class="imgCard__caption">Nejlepší dovolená pro nejvíc nejlínější lidi na světě</p>
+                <div class="imgCard__content">
+                    <h3 class="imgCard__header">Pohoda pod palmami</h3>
+                    <p class="imgCard__caption">Nejlepší dovolená pro nejvíc nejlínější lidi na světě</p>
+                </div>
             </div>
-            <div class="imgCard img-02">
-                <p class="imgCard__price">8 490 Kč</p>
-                <h3 class="imgCard__header">Klid u jezera</h3>
-            </div>
-            <div class="imgCard img-03">
-                <p class="imgCard__price">4 990 Kč</p>
-                <h3 class="imgCard__header">Výlet na kole</h3>
-            </div>
+        </div>
+        <div class="imgCard img-02">
+            <p class="imgCard__price">8 490 Kč</p>
+            <h3 class="imgCard__header">Klid u jezera</h3>
+        </div>
+        <div class="imgCard img-03">
+            <p class="imgCard__price">4 990 Kč</p>
+            <h3 class="imgCard__header">Výlet na kole</h3>
+        </div>
         </div>
 
         <!-- podpora -->
@@ -76,17 +79,18 @@
 
         <div class="imgCards">
 
-            <div class="imgCard imgCard--big">
+            <div class="imgCard imgCard--xl img-11">
                 <p class="imgCard__price">15 900 Kč</p>
-                <h3 class="imgCard__header">Romantika u horského jezera</h3>
-                <p class="imgCard__caption">Dechberoucí výhledy na horské štíty a zrcadlovou hladinu jezera.</p>
+                <div class="imgCard__content">
+                    <h3 class="imgCard__header">Romantika u horského jezera</h3>
+                    <p class="imgCard__caption">Dechberoucí výhledy na horské štíty a zrcadlovou hladinu jezera.</p>
+                </div>
             </div>
-
-            <div class="imgCard imgCard--small">
+            <div class="imgCard img-12">
                 <p class="imgCard__price">18 500 Kč</p>
                 <h3 class="imgCard__header">Grand Canyon</h3>
             </div>
-            <div class="imgCard imgCard--small">
+            <div class="imgCard img-13">
                 <p class="imgCard__price">8 900 Kč</p>
                 <h3 class="imgCard__header">Pěšky po Kanárských ostrovech</h3>
             </div>
@@ -94,7 +98,7 @@
 
         <!-- novinky -->
         <h2>Novinky</h2>
-        
+
         <div class="cards">
             <div class="card">
                 <p class="card__date">15. 8. 2020</p>
