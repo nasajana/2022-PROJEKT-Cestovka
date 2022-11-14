@@ -1,48 +1,73 @@
+@charset "UTF-8";
 main {
   display: flex;
   flex-direction: column;
-}
-main section {
-  margin: 20px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
   gap: 20px;
 }
 
-.col-2 {
-  grid-column: span 2;
+@media (min-width: 768px) {
+  .imgContainer,
+.imgCards,
+.cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
 }
-
-.col-3 {
-  grid-column: span 3;
+@media (min-width: 768px) and (max-width: 1399px) {
+  .imgContainer .imgCard,
+.imgCards .imgCard,
+.cards .imgCard {
+    grid-column: span 6;
+  }
+  .imgContainer .imgCard--xl,
+.imgCards .imgCard--xl,
+.cards .imgCard--xl {
+    grid-column: span 12;
+  }
+  .imgContainer .iconCard,
+.imgCards .iconCard,
+.cards .iconCard {
+    grid-column: span 6;
+  }
+  .imgContainer .card__content,
+.imgCards .card__content,
+.cards .card__content {
+    grid-column: span 12;
+  }
 }
-
-.col-4 {
-  grid-column: span 4;
-}
-
-.col-6 {
-  grid-column: span 6;
-}
-
-.col-8 {
-  grid-column: span 8;
-}
-
-.col-9 {
-  grid-column: span 9;
-}
-
-.col-12 {
-  grid-column: span 12;
+@media (min-width: 1400px) {
+  .imgContainer,
+.imgCards,
+.cards {
+    grid-rows: auto;
+  }
+  .imgContainer .imgCard,
+.imgCards .imgCard,
+.cards .imgCard {
+    grid-column: span 4;
+  }
+  .imgContainer .imgCard--xl,
+.imgCards .imgCard--xl,
+.cards .imgCard--xl {
+    grid-column: span 8;
+    grid-row: span 2;
+  }
+  .imgContainer .iconCard,
+.imgCards .iconCard,
+.cards .iconCard {
+    grid-column: span 3;
+  }
+  .imgContainer .card__content,
+.imgCards .card__content,
+.cards .card__content {
+    grid-column: span 4;
+  }
 }
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 h1,
@@ -55,6 +80,11 @@ p {
   padding: 0;
 }
 
+h2 {
+  padding-bottom: 20px;
+}
+
+/*záhlaví */
 .header {
   display: flex;
   flex-direction: column;
@@ -71,6 +101,7 @@ p {
   }
 }
 
+/* hlavní menu */
 .nav {
   display: flex;
   justify-content: center;
@@ -82,7 +113,6 @@ p {
 .nav__link {
   text-decoration: none;
   color: #F03000;
-  font-weight: 400;
   padding: 20px;
 }
 .nav__link:hover, .nav__link:focus {
@@ -90,6 +120,7 @@ p {
   color: #fff;
 }
 
+/* karty s obrázky */
 .img-01 {
   background-image: url(/images/palmy.png);
 }
@@ -125,6 +156,8 @@ p {
   justify-content: space-between;
   padding: 15px;
   color: #fff;
+  text-shadow: 0px 1px 10px #000000;
+  margin-bottom: 20px;
 }
 .imgCard--xl {
   min-height: 240px;
@@ -133,15 +166,33 @@ p {
   padding: 10px;
   background-color: #F03000;
 }
+.imgCard__header {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.imgCard__content h3 {
+  font-size: 1.75em;
+}
+@media (min-width: 768px) {
+  .imgCard {
+    margin-bottom: 0;
+  }
+}
 
+/* kartičky s texty */
 .card {
   background-color: #F0F0F0;
+  margin-bottom: 20px;
 }
 .card__content {
   padding: 20px;
 }
+.card__date {
+  color: #888888;
+  margin-bottom: 10px;
+}
 .card__header {
-  font-weight: 400;
   font-size: 1.125em;
   color: #F03000;
   margin-bottom: 10px;
@@ -149,16 +200,30 @@ p {
 .card__caption {
   font-family: "Open Sans", sans-serif;
 }
+@media (min-width: 768px) {
+  .card {
+    margin-bottom: 0;
+  }
+}
 
 .iconCard {
   display: flex;
+  margin-bottom: 10px;
 }
 .iconCard__icon {
   padding: 20px;
   height: 40px;
   flex: 0 0 60px;
 }
+@media (min-width: 768px) {
+  .iconCard {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
 
+/* patička */
 .footer {
   background-color: #000;
   color: #fff;

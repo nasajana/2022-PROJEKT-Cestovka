@@ -2,6 +2,8 @@
 @import "grid.scss";
 @import "typography.scss";
 
+/*záhlaví */
+
 .header{
     display: flex;
     flex-direction: column;
@@ -12,16 +14,16 @@
         height: 30px;
         
     }
-    &__nav{
-        
-    }
 
-    @media screen and (min-width: $breakpoint--tablet) {
+    @media screen and (min-width: 768px) {
         flex-direction: row;
         align-items: center;
+
     }
 
 }
+
+/* hlavní menu */
 
 .nav{
     display: flex;
@@ -46,6 +48,7 @@
 
 }
 
+/* karty s obrázky */
 
 .img-01{
     background-image: url(/images/palmy.png);
@@ -77,60 +80,98 @@
     justify-content: space-between;
     padding: 15px;
     color: $color-white;
+    text-shadow: 0px 1px 10px #000000;
+    margin-bottom: $spacer;
     
     &--xl{
         min-height: 240px;
     }
+
     &__price {
         padding: 10px;
         background-color: $color-primary;
+
     }
+
+    &__header {
+        font-size: 1.25em;
+        font-weight: $semibold;
+        margin-bottom: $spacer;
+        
+    }
+
+    &__content {
+        & h3 {
+            font-size: 1.75em;
+        }
+    }
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+  
 }
+
+/* kartičky s texty */
 
 .card{
     background-color: $color-gray--light;
-    
+    margin-bottom: $spacer;
+
     &__content {
         padding: $spacer;
     }
 
     &__date {
-        font
+        color: $color-gray;
+        margin-bottom: calc($spacer/2);
     }
     &__header {
     font-size: 1.125em;
     color: $color-primary;
-    margin-bottom: calc(0.5$spacer);
+    margin-bottom: calc($spacer/2);
     }
 
     &__caption {
         font-family: $secondary-font;
+    }
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
     }
     
 }
 
 .iconCard{
     display: flex;
+    margin-bottom: 10px;
 
-    &__icon{
+    &__icon {
         padding: $spacer;
         height: 40px;
         flex: 0 0 60px;
     }
 
-    
+    @media (min-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 0;
+        
+    }
+ 
 }
 
 
 
 
+/* patička */
 .footer{
     background-color: $color-black;
     color: $color-white;
     padding: $spacer;
     text-align: center;
 
-    & p{
+    & p {
         margin: 0;
     }
 }
