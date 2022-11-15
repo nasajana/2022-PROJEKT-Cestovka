@@ -1,3 +1,8 @@
+body {
+  max-width: 1400px;
+  margin: auto;
+}
+
 main {
   display: flex;
   flex-direction: column;
